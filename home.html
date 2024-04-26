@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moment 2</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="src/pics/logo-footer.png?as=avif">
+    <link rel="stylesheet" href="src/css/main.scss">
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/b2fa88793a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="src/pics/logo-footer.png?as=avif&width=60" alt="Logotyp">
+                </span>
+            </div>
+            <i class="fa-solid fa-chevron-right toggle"></i>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-link">
+                    <li class="nav-link">
+                        <a href="home.html">
+                            <i class="fa-solid fa-house icon"></i>
+                            <span class="text nav-text">Startsida</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="add.html">
+                            <i class="fa-solid fa-square-plus icon"></i>
+                            <span class="text nav-text">Lägg till</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="login.html">
+                            <i class="fa-solid fa-circle-info icon"></i>
+                            <span class="text nav-text">Om uppgiften</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <ul>
+                    <li class="nav-link" id="celsside"></li>
+                    <li class="mode">
+                        <div class="moon-sun">
+                            <i class="fa-solid fa-sun icon sun"></i>
+                            <i class="fa-solid fa-moon icon moon"></i>
+                        </div>
+                        <span class="mode-text text">Dark Mode</span>
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="home">
+        <h1 class="text">Startsida</h1>
+        <ul id="work-experiences-list"></ul>
+    </section>
+    <script src="src/js/design.js" type="module"></script>
+    <script src="src/js/get.js" type="module"></script>
+</body>
+</html>
