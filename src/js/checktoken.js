@@ -2,7 +2,6 @@
 /* Fil för att kontrollera om där finns en godkänd token */
 function checkAuthentication() {
     const token = localStorage.getItem('token'); 
-    console.log(token)   
     if (!token) {
         window.location.href = '/index.html'
     } else {
