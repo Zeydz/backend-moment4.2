@@ -12,8 +12,8 @@
 </head>
 <body>
     <div class="container">
-        <form id="login-form">
-            <h2>Logga in</h2>
+        <form id="register-form" action="http://localhost:3000/api/register" method="POST">
+            <h2>Registrera</h2>
             <div class="form-group">
                 <label for="username">Användarnamn</label>
                 <input type="text" id="username" name="username" required>
@@ -22,11 +22,11 @@
                 <label for="password">Lösenord</label>
                 <input type="password" id="password" name="password" required>
             </div>
-            <button type="submit">Login</button>
-            <a href="register.html">Inget konto? Registrera dig</a>
-            <p id="error-message"></p>
+            <button type="submit">Registrera</button>
+            <a href="index.html">Har du ett konto? Logga in</a>
+            <p id="status-message"></p>
         </form>
     </div>
-    <script src="src/js/login.js" type="module"></script>
+    <script src="src/js/register.js" type="module"></script>
 </body>
 </html>

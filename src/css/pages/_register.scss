@@ -9,7 +9,7 @@ $error-color: #e74c3c;
     height: 100vh;
     flex-direction: column;
 }
-#login-form {
+#register-form {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 5px;
@@ -22,6 +22,7 @@ $error-color: #e74c3c;
         text-decoration: none;
         margin-top: 30px;
     }
+    
 
     h2 {
         margin-bottom: 20px;
@@ -45,8 +46,8 @@ $error-color: #e74c3c;
             border-radius: 3px;
         }
     }
-    #error-message {
-        color: red;
+    #status-message {
+        color: green;
         margin-top: 8px;
         text-align: center;
     }
@@ -65,5 +66,4 @@ $error-color: #e74c3c;
         }
     }
 }
-
 
