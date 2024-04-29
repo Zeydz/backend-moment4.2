@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loginForm.addEventListener('submit', function (event) {
         event.preventDefault();
 
+        const errorMessageEl = document.getElementById('error-message');
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
 
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         })
         .catch (error => { 
+            errorMessageEl.textContent = 'Fel användarnamn/lösenord'
             console.error('Inloggning misslyckades:', error)
         });
     })

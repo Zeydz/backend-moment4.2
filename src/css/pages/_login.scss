@@ -38,6 +38,11 @@ $error-color: #e74c3c;
             border-radius: 3px;
         }
     }
+    #error-message {
+        color: red;
+        margin-top: 8px;
+        text-align: center;
+    }
 
     button {
         background-color: $primary-color;
