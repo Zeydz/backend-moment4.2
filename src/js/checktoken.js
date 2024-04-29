@@ -1,3 +1,4 @@
+
 /* Fil för att kontrollera om där finns en godkänd token */
 function checkAuthentication() {
     const token = localStorage.getItem('token'); 
@@ -22,5 +23,11 @@ function checkAuthentication() {
             window.location.href = '/index.html'
         })
     }
+}
+/* Logga ut funktion */
+const logOutEl = document.getElementById('log-out');
+logOutEl.addEventListener('click', logOut);
+function logOut() {
+    localStorage.removeItem('token');
 }
 document.addEventListener('DOMContentLoaded', checkAuthentication);

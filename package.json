@@ -4,7 +4,7 @@
   "description": "",
   "source": "index.html",
   "scripts": {
-    "start": "parcel",
+    "start": "parcel index.html home.html add.html",
     "build": "parcel build index.html home.html add.html"
   },
   "keywords": [],
