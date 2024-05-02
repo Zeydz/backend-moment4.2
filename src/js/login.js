@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const password = document.getElementById('password').value;
 
         /* Skicka data till API */
-        fetch('http://localhost:3000/api/login', {
+        fetch('https://backend-moment4.onrender.com/api/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

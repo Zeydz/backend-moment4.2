@@ -5,7 +5,7 @@ function checkAuthentication() {
     if (!token) {
         window.location.href = '/index.html'
     } else {
-        fetch('http://localhost:3000/api/check-auth', {
+        fetch('https://backend-moment4.onrender.com/api/check-auth', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

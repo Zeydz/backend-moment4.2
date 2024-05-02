@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const password = passwordInput.value;
 
         /* Skicka post för att registrera användare */
-        fetch('http://localhost:3000/api/register', {
+        fetch('https://backend-moment4.onrender.com/api/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
