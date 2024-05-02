@@ -46,7 +46,7 @@ $error-color: #e74c3c;
         }
     }
     #error-message {
-        color: red;
+        color: $error-color;
         margin-top: 8px;
         text-align: center;
     }
@@ -65,5 +65,3 @@ $error-color: #e74c3c;
         }
     }
 }
-
-
