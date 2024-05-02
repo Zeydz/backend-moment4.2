@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!response.ok) {
                 throw new Error('Registrering misslyckades');
             }
+            statusMessageEl.style.color = 'green';
             statusMessageEl.textContent = 'Användare registrerad';
             
             /* Nollställ värden efter skickat formulär */
@@ -32,7 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch (error => { 
             /* Hantera fel som uppstår */
             console.error('Registrering misslyckades:', error);
+            statusMessageEl.style.color = 'red';
             statusMessageEl.textContent = 'Registrering misslyckades';
+            
         });
     });
 });
