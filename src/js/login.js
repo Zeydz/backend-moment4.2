@@ -1,13 +1,14 @@
 /* Kod för att logga in */
 document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.getElementById('login-form');
-
+    
     loginForm.addEventListener('submit', function (event) {
         event.preventDefault();
 
         const errorMessageEl = document.getElementById('error-message');
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
+        showLoadingSpinner();
 
         /* Skicka data till API */
         fetch('https://backend-moment4.onrender.com/api/login', {
@@ -36,3 +37,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     })
 })
+
+/* Laddningsanimation som visar spinnern */
+function showLoadingSpinner() {
+    document.getElementById("loadingSpinner").style.display = "block";
+  }
+  /* Laddningsanimation som gömmer spinnern */
+  function hideLoadingSpinner() {
+    document.getElementById("loadingSpinner").style.display = "none";
+  }
+  

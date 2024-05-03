@@ -13,7 +13,6 @@
   .spinner {
     display: none;
     z-index: 10;
-    margin: auto;
     border: 4px solid rgba(0, 0, 0, 0.1);
     border-left-color: #7983ff;
     border-radius: 50%;
@@ -22,3 +21,18 @@
     animation: spin 1s linear infinite;
     margin: 150px auto;
   }
+
+    /* Design för spinner/loading */
+    .spinner2 {
+      position: absolute;
+      top: -77;
+      display: none;
+      z-index: 10;
+      border: 4px solid rgba(0, 0, 0, 0.1);
+      border-left-color: #7983ff;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      animation: spin 1s linear infinite;
+      margin: 500px auto;
+    }

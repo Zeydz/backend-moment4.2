@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const username = usernameInput.value;
         const password = passwordInput.value;
-
+        showLoadingSpinner()
         /* Skicka post för att registrera användare */
         fetch('https://backend-moment4.onrender.com/api/register', {
             method: 'POST',
@@ -22,7 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => {
             if (!response.ok) {
                 throw new Error('Registrering misslyckades');
+                
             }
+            hideLoadingSpinner()
             statusMessageEl.style.color = 'green';
             statusMessageEl.textContent = 'Användare registrerad';
             
@@ -32,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch (error => { 
             /* Hantera fel som uppstår */
+            hideLoadingSpinner()
             console.error('Registrering misslyckades:', error);
             statusMessageEl.style.color = 'red';
             statusMessageEl.textContent = 'Registrering misslyckades';
@@ -39,3 +42,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+/* Laddningsanimation som visar spinnern */
+function showLoadingSpinner() {
+    document.getElementById("loadingSpinner").style.display = "block";
+  }
+  /* Laddningsanimation som gömmer spinnern */
+  function hideLoadingSpinner() {
+    document.getElementById("loadingSpinner").style.display = "none";
+  }
+  
