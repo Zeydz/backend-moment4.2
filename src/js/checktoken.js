@@ -1,6 +1,7 @@
 
 /* Fil för att kontrollera om där finns en godkänd token */
 function checkAuthentication() {
+    const usernameEl = document.getElementById('username');
     const token = localStorage.getItem('token'); 
     if (!token) {
         window.location.href = '/index.html'
@@ -16,6 +17,11 @@ function checkAuthentication() {
             if(!response.ok) {
                 throw new Error('Ogiltig JWT-TOKEN');
             }
+            return response.json();
+        })
+        .then(data => {
+            console.log(data)
+            usernameEl.textContent = 'Inloggad som: ' + data.username.username;
         })
         .catch(error => {
             console.error('Ogiltig JWT-TOKEN:', error);
